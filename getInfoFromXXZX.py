@@ -62,16 +62,18 @@ def check(sip,yuan_ip):
         else:
             return 0
 
-def split_results():
-    fp = open("qqq.txt","r")
-    fp1 = open("dw.txt","w")
-    fp2 = open("sb.txt","w")
-    lines = fp.readlines()
-    for line in lines:
-        list1 = line.split(":")
-        list2 = list1[2].split(",")[0]
-        fp1.write(list2.strip(" ''")+"\n")
-        fp2.write(list1[3].strip(" '").replace("'}",""))
+# def split_results():
+#     fp = open("qqq.txt","r")
+#     fp1 = open("dw.txt","w")
+#     fp2 = open("sb.txt","w")
+#     lines = fp.readlines()
+#     for line in lines:
+#         list1 = line.split(":")
+#         list2 = list1[2].split(",")[0]
+#         fp1.write(list2.strip(" ''")+"\n")
+#         fp2.write(list1[3].strip(" '").replace("'}",""))
+#用字典存储时，使用pandas写入时，总是保存最后一行所以这段用来格式化运行时输出的dic_ip;
+#改用数组存储并转化字典可直接使用pandas写入excel。
 
 
 if __name__ == "__main__":
